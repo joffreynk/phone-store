@@ -5,18 +5,17 @@ const brandSlice = createSlice({
   name: 'phoneBrands',
   initialState: {
     loading: false,
-    message: 'empty',
     phones: [],
   },
   reducer: {},
   extraReducers: {
     [getBrands.fulfilled]: (state, action) => ({
-      ...state, loading: false, phones: [...action.payload], message: 'empty',
+      ...state, loading: false, phones: [...action.payload],
     }),
     [getBrands.pending]: (state, action) => (
-      { ...state, loading: true, message: action.type }),
+      { ...state, loading: true, ...action.payload }),
     [getBrands.rejected]: (state, action) => (
-      { ...state, loading: false, messages: action.payload.message }),
+      { ...state, loading: false, ...action.payload }),
   },
 });
 

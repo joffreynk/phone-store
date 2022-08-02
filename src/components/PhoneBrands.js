@@ -3,22 +3,37 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Header from './Header';
 import getBrands from '../redux/phoneBraands/brandActionsCreator';
+import Spinner from './Spinner';
 
 const PhoneBrands = () => {
-  const { phones, loading, message } = useSelector((store) => store.phoneBrands);
+  const { phones, loading } = useSelector(
+    (store) => store.phoneBrands,
+  );
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getBrands());
   }, []);
+
+  const data = phones.map((phone, i) => (
+    <Link to={phone.slug} key={phone.slug.slice(i)}>
+      <div className="singleBrand">
+        <div className="phoneImage">
+          <img src={phone.image} alt={phone.name} />
+        </div>
+        <div>&gt</div>
+        <div>
+          <h3>{phone.name}</h3>
+          <p>{phone.count}</p>
+        </div>
+      </div>
+    </Link>
+  ));
   return (
-    <div>
+    <div className="allBrands">
       <Header />
-      {phones.length}
-      {loading ? <h1>LOADING</h1> : ''}
-      {message}
-      {console.log(phones)}
-      <h1>Hello word</h1>
-      {phones.length ? <Link to={`/${phones[0].slug}`}>{phones[0].slug}</Link> : ''}
+      <div className="brands">
+        {loading ? <Spinner /> : data}
+      </div>
     </div>
   );
 };
