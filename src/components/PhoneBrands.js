@@ -11,7 +11,9 @@ const PhoneBrands = () => {
   );
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getBrands());
+    if (phones.length < 1) {
+      dispatch(getBrands());
+    }
   }, []);
 
   const data = phones.map((phone, i) => (
@@ -28,11 +30,16 @@ const PhoneBrands = () => {
       </div>
     </Link>
   ));
+
+  if (loading) {
+    return <Spinner />;
+  }
+
   return (
     <div className="allBrands">
       <Header />
       <div className="brands">
-        {loading ? <Spinner /> : data}
+        {data}
       </div>
     </div>
   );
