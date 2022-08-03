@@ -14,8 +14,8 @@ const Header = ({ title, count }) => {
         <div className="backHome">
           <Link to="/">
             <IoChevronBackOutline className="back" />
+            <span className="currentYear">{year}</span>
           </Link>
-          <span className="currentYear">{year}</span>
         </div>
         <h3 className="popular">{title}</h3>
         <div className="icons">
@@ -27,7 +27,7 @@ const Header = ({ title, count }) => {
       <div className="headerImage">
         <div className="headerImg">
           <img src={back} className="headermainImg" alt="not exist" />
-          <span>{`We have ${count} phones in stock`}</span>
+          <h3 className="header-description">{`We have (${count}) phones in stock`}</h3>
         </div>
       </div>
     </header>

@@ -18,19 +18,31 @@ const PhoneDetails = () => {
 
   return (
     <div className="phoneDetails">
-      <Header title={`Latest ${phoneDetails.brand} phones`} count={Number(slug.slice(-5))} />
-      <div>
-        <div>
-          <img src={phoneDetails.bigImage} alt={phoneDetails.brand} />
+      <Header title={`Latest ${phoneDetails.brand} smart phones`} count={Number(slug.slice(-5))} />
+      <div className="phoneDetails">
+        <h3>
+          {phoneDetails.name}
+          {' '}
+          Phone in different positions
+        </h3>
+        <div className="detail-main">
+          <img className="detail-main-img" src={phoneDetails.bigImage} alt={phoneDetails.brand} />
         </div>
-        <div>
-          <img src={phoneDetails.image} alt={phoneDetails.brand} />
-        </div>
-        <div>
-          <p>{phoneDetails.name}</p>
-          <p>{phoneDetails.released}</p>
-          <p>{phoneDetails.os}</p>
-          <p>{phoneDetails.storage}</p>
+        <h3>
+          {phoneDetails.name}
+          {' '}
+          Phone&apos;s Properties
+        </h3>
+        <div className="detail-description">
+          <div className="descriptin-img">
+            <img src={phoneDetails.image} alt={phoneDetails.brand} />
+          </div>
+          <div className="description-content">
+            <p>{phoneDetails.name}</p>
+            <p>{phoneDetails.released}</p>
+            <p>{phoneDetails.os}</p>
+            <p>{phoneDetails.storage}</p>
+          </div>
         </div>
       </div>
     </div>

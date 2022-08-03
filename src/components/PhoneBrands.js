@@ -28,11 +28,9 @@ const PhoneBrands = () => {
   const data = phones.map((phone, i) => (
     <Link to={phone.slug} key={phone.slug.slice(i)}>
       <div className="singleBrand">
-        <div className="phoneImage">
-          <img src={phone.image} alt={phone.name} />
-        </div>
-        <div><FaArrowAltCircleRight /></div>
-        <div>
+        <div className="arrowGo"><FaArrowAltCircleRight /></div>
+        <img className="PhonePic" src={phone.image} alt={phone.name} />
+        <div className="brandText">
           <h3>{phone.name}</h3>
           <p>{phone.count}</p>
         </div>

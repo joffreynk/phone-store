@@ -3,18 +3,30 @@
 * {
   margin: 0;
   padding: 0;
-  color: #fff;
   font-family: 'Lato', sans-serif;
+  color: #fff;
+}
+
+header * {
+  color: #fff;
 }
 
 body {
-  background-image: linear-gradient(rgb(206, 41, 127), rgb(115, 62, 89));
+  background-color: rgb(206, 206, 206);
+}
+
+.allBrands {
+  background-color: rgb(206, 206, 206);
+  border: 15px solid rgb(70, 70, 70);
+  border-radius: 20px;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   padding: 6px 1rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .headermainImg {
@@ -22,18 +34,80 @@ nav {
   height: 14rem;
 }
 
-.brands {
-  display: grid;
-  grid-template-columns: auto auto;
+.headerImg {
+  position: relative;
 }
 
-.singleBrand{
+.header-description {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+
+.brands {
+  padding: 6px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 15px;
+}
+
+@media only screen and (min-width: 600px)  {
+  .brands {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (min-width: 1000px)  {
+  .brands {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+.singleBrand {
   width: 100%;
-  height: 300px;
-  border: 1px solid rgb(108, 39, 73);
-  border-collapse: collapse;
+  position: relative;
+  border-radius: 15px;
+}
+
+.singleBrand * {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.PhonePic {
+  width: 100%;
+  border-radius: 17px;
 }
 
 a {
   text-decoration: none;
+}
+
+.brandText {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.arrowGo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+}
+
+.detail-description {
+  display: flex;
+  gap: 45px;
+}
+
+.detail-main-img {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.phoneDetails > h3 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 25px;
 }
