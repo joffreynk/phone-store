@@ -17,9 +17,9 @@ const PhoneDetails = () => {
   }
 
   return (
-    <div className="phoneDetails">
+    <div>
       <Header title={`Latest ${phoneDetails.brand} smart phones`} count={Number(slug.slice(-5))} />
-      <div className="phoneDetails">
+      <div className="phone-detail-container">
         <h3>
           {phoneDetails.name}
           {' '}
@@ -28,16 +28,16 @@ const PhoneDetails = () => {
         <div className="detail-main">
           <img className="detail-main-img" src={phoneDetails.bigImage} alt={phoneDetails.brand} />
         </div>
-        <h3>
-          {phoneDetails.name}
-          {' '}
-          Phone&apos;s Properties
-        </h3>
-        <div className="detail-description">
-          <div className="descriptin-img">
+        <div className="phone-detail-description">
+          <div className="description-img">
             <img src={phoneDetails.image} alt={phoneDetails.brand} />
           </div>
           <div className="description-content">
+            <h3>
+              {phoneDetails.name}
+              {' '}
+              Phone&apos;s Properties
+            </h3>
             <p>{phoneDetails.name}</p>
             <p>{phoneDetails.released}</p>
             <p>{phoneDetails.os}</p>

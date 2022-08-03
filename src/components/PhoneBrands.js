@@ -26,13 +26,19 @@ const PhoneBrands = () => {
   }, []);
 
   const data = phones.map((phone, i) => (
-    <Link to={phone.slug} key={phone.slug.slice(i)}>
-      <div className="singleBrand">
+    <Link
+      to={phone.slug}
+      key={phone.slug.slice(i)}
+      className="singleBrand"
+    >
+      <div className="PhonePic">
+        <img src={phone.image} alt={phone.name} />
+      </div>
+      <div className="brand-elements">
         <div className="arrowGo"><FaArrowAltCircleRight /></div>
-        <img className="PhonePic" src={phone.image} alt={phone.name} />
-        <div className="brandText">
-          <h3>{phone.name}</h3>
-          <p>{phone.count}</p>
+        <div className="brand-text">
+          <p className="phone-count">{phone.count}</p>
+          <h3 className="phone-name">{phone.name}</h3>
         </div>
       </div>
     </Link>
