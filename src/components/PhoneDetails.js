@@ -18,7 +18,7 @@ const PhoneDetails = () => {
 
   return (
     <div className="phoneDetails">
-      <Header />
+      <Header title={`Latest ${phoneDetails.brand} phones`} count={Number(slug.slice(-5))} />
       <div>
         <div>
           <img src={phoneDetails.bigImage} alt={phoneDetails.brand} />

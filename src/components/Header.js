@@ -1,11 +1,12 @@
 import React from 'react';
-import { BsMic } from 'react-icons/bs';
+import PropTypes from 'prop-types';
+import { FaMicrophone } from 'react-icons/fa';
 import { IoChevronBackOutline } from 'react-icons/io5';
-import { FiSettings } from 'react-icons/fi';
+import { AiFillSetting } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import back from '../images/home3.webp';
 
-const Header = () => {
+const Header = ({ title, count }) => {
   const year = new Date().getFullYear();
   return (
     <header>
@@ -16,16 +17,17 @@ const Header = () => {
           </Link>
           <span className="currentYear">{year}</span>
         </div>
-        <h3 className="popular">Most popular</h3>
+        <h3 className="popular">{title}</h3>
         <div className="icons">
-          <BsMic />
-          <FiSettings />
+          <FaMicrophone />
+          <AiFillSetting />
           {' '}
         </div>
       </nav>
       <div className="headerImage">
         <div className="headerImg">
           <img src={back} className="headermainImg" alt="not exist" />
+          <span>{`We have ${count} phones in stock`}</span>
         </div>
       </div>
     </header>
@@ -33,3 +35,8 @@ const Header = () => {
 };
 
 export default Header;
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
+  count: PropTypes.number.isRequired,
+};
