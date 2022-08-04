@@ -14,8 +14,10 @@
 - React router DOM
 - API
 
+
 # [checkout the Demo link](https://latest-phone-store.netlify.app/)
 # [project description](https://www.loom.com/share/15b846d2ef044c4d88a73e96e51a9555)
+
 
 ## Getting Started
 
@@ -52,10 +54,12 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+
 This is my original work and no where else you can find it. but I have used some public materials which you can find down
 
 * [API](https://api-mobilespecs.azharimm.site/v2/latest)
 * [React Icons](https://react-icons.github.io/react-icons/search)
+
 
 ## 📝 License
 
