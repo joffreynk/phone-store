@@ -15,6 +15,7 @@
 - API
 
 # [checkout the Demo link](https://latest-phone-store.netlify.app/)
+# [project description](https://www.loom.com/share/15b846d2ef044c4d88a73e96e51a9555)
 
 ## Getting Started
 
