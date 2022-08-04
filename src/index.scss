@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.spinner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  color: #fff;
+
+  .headerImage {
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('./images/home3.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .header-description {
+      padding: 1rem;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 1rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+
+  .backHome {
+    a {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.brands {
+  padding: 6px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 15px;
+}
+
+.singleBrand {
+  display: flex;
+  height: 99%;
+  width: 100%;
+  background-color: #000;
+  position: relative;
+  border-radius: 15px;
+
+  .PhonePic {
+    width: 100%;
+
+    img {
+      -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.6)));
+      mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.6)));
+      border-radius: 15px;
+      object-fit: cover;
+      width: 184%;
+    }
+  }
+
+  .brand-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 84%;
+
+    .arrowGo {
+      text-align: end;
+      position: relative;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.6rem;
+    }
+
+    .brand-text {
+      text-align: end;
+      position: relative;
+      bottom: 1rem;
+      right: 1rem;
+    }
+  }
+}
+
+.phone-detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+
+  h3 {
+    padding: 1rem;
+    text-align: center;
+    font-weight: 800;
+    font-size: 25px;
+  }
+
+  .detail-main {
+    .detail-main-img {
+      width: 100%;
+    }
+  }
+
+  .phone-detail-description {
+    display: flex;
+    margin: 0.6rem;
+    gap: 1rem;
+
+    .description-img {
+      img {
+        width: 100%;
+        border-radius: 13px;
+      }
+    }
+
+    .description-content {
+      h3 {
+        width: 100%;
+        padding: 0;
+      }
+
+      p {
+        width: 100%;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .brands {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .singleBrand {
+    height: 99%;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .brands {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .singleBrand {
+    height: 99%;
+    width: 99%;
+  }
+}
