@@ -84,10 +84,10 @@ nav {
 
   .PhonePic {
     width: 100%;
-  
+
     img {
-      -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.85)), to(rgba(0,0,0,0.6)));
-      mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.85)), to(rgba(0,0,0,0.6)));
+      -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.6)));
+      mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.6)));
       border-radius: 15px;
       object-fit: cover;
       width: 184%;
@@ -165,7 +165,7 @@ nav {
   }
 }
 
-@media only screen and (min-width: 600px)  {
+@media only screen and (min-width: 600px) {
   .brands {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -176,7 +176,7 @@ nav {
   }
 }
 
-@media only screen and (min-width: 1000px)  {
+@media only screen and (min-width: 1000px) {
   .brands {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
