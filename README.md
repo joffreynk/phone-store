@@ -14,7 +14,7 @@
 - React router DOM
 - API
 
-
+# [checkout the Demo link](https://latest-phone-store.netlify.app/)
 
 ## Getting Started
 
