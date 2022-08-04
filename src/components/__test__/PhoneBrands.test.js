@@ -1,4 +1,5 @@
 import renderer from 'react-test-renderer';
+import { screen, render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import PhoneBrands from '../PhoneBrands';
 import App from '../../App';
@@ -15,5 +16,17 @@ describe(' Phone Brands Component Rendering ', () => {
         </Provider>,
       );
     expect(tree).toMatchSnapshot();
+  });
+
+  it('When Phones component runs display latest phone as header', () => {
+    render(
+      <Provider store={store}>
+        <App>
+          <PhoneBrands />
+        </App>
+      </Provider>,
+    );
+
+    expect(screen.getByText(/loading/i)).toMatchSnapshot();
   });
 });

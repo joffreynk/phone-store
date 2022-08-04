@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[` Phone Brands Component Rendering  When Phones component runs display latest phone as header 1`] = `
+<div
+  class="spinner"
+>
+  Loading
+  <span
+    style="width: 140px; height: 140px; border-radius: 100%; border: 2px solid; border-top-color: #fff; border-bottom-color: transparent; border-left-color: #fff; border-right-color: #fff; display: inline-block; animation: react-spinners-ClipLoader-clip 0.75s 0s infinite linear; animation-fill-mode: both;"
+  />
+</div>
+`;
+
 exports[` Phone Brands Component Rendering  renders correctly 1`] = `
 <div
   className="App"
@@ -104,7 +115,100 @@ exports[` Phone Brands Component Rendering  renders correctly 1`] = `
       </div>
     </header>
     <div
+      className="search"
+    >
+      <input
+        className="serch-field"
+        onChange={[Function]}
+        placeholder="Search by phone name"
+        type="text"
+        value=""
+      />
+      <button
+        className="close-icon"
+        onClick={[Function]}
+        type="button"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
       className="brands"
+    />
+  </div>
+</div>
+`;
+
+exports[` Phone Brands Component Rendering  renders correctly 2`] = `
+<div
+  className="App"
+>
+  <div
+    className="spinner"
+  >
+    <span
+      style={
+        Object {
+          "animation": "react-spinners-ClipLoader-clip 0.75s 0s infinite linear",
+          "animationFillMode": "both",
+          "background": "transparent !important",
+          "border": "2px solid",
+          "borderBottomColor": "transparent",
+          "borderLeftColor": "#fff",
+          "borderRadius": "100%",
+          "borderRightColor": "#fff",
+          "borderTopColor": "#fff",
+          "display": "inline-block",
+          "height": "140px",
+          "width": "140px",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[` Phone Brands Component Rendering  test the header 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="spinner"
+  >
+    <span
+      style={
+        Object {
+          "animation": "react-spinners-ClipLoader-clip 0.75s 0s infinite linear",
+          "animationFillMode": "both",
+          "background": "transparent !important",
+          "border": "2px solid",
+          "borderBottomColor": "transparent",
+          "borderLeftColor": "#fff",
+          "borderRadius": "100%",
+          "borderRightColor": "#fff",
+          "borderTopColor": "#fff",
+          "display": "inline-block",
+          "height": "140px",
+          "width": "140px",
+        }
+      }
     />
   </div>
 </div>

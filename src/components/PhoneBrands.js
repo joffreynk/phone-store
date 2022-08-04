@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
+import { IoMdClose } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import Header from './Header';
 import getBrands from '../redux/phoneBraands/brandActionsCreator';
@@ -10,6 +11,7 @@ const PhoneBrands = () => {
   const { phones, loading } = useSelector(
     (store) => store.phoneBrands,
   );
+  const [searchKey, setSearchKey] = useState('');
   let count = 0;
   if (phones.length > 0) {
     const phonesArr = [];
@@ -24,8 +26,16 @@ const PhoneBrands = () => {
       dispatch(getBrands());
     }
   }, []);
+  const newPhones = phones.filter((phone) => (
+    phone.name.toLowerCase().includes(searchKey.toLocaleLowerCase())));
+  let displayPhone = [];
+  if (searchKey.trim().length > 0) {
+    displayPhone = [...newPhones];
+  } else {
+    displayPhone = [...phones];
+  }
 
-  const data = phones.map((phone, i) => (
+  const data = displayPhone.map((phone, i) => (
     <Link
       to={phone.slug}
       key={phone.slug.slice(i)}
@@ -51,6 +61,12 @@ const PhoneBrands = () => {
   return (
     <div className="allBrands">
       <Header title="Latest Phones" count={count} />
+      <div className="search">
+        <input type="text" className="serch-field" value={searchKey} placeholder="Search by phone name" onChange={(e) => setSearchKey(e.target.value)} />
+        <button type="button" className="close-icon" onClick={() => setSearchKey('')}>
+          <IoMdClose />
+        </button>
+      </div>
       <div className="brands">
         {data}
       </div>

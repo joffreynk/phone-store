@@ -52,7 +52,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-This work was done in collaborative teams  and you cannot find it anywhere else
+This is my original work and no where else you can find it. but I have used some public materials which you can find down
+
+* [API](https://api-mobilespecs.azharimm.site/v2/latest)
+* [React Icons](https://react-icons.github.io/react-icons/search)
 
 ## 📝 License
 
