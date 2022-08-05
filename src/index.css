@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.spinner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  color: #fff;
+}
+
+header .headerImage {
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("./images/home3.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .headerImage .header-description {
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 1rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+nav .backHome a {
+  display: flex;
+  align-items: center;
+}
+
+nav .icons {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.search .serch-field {
+  line-height: 0.5rem;
+  font-size: 20px;
+  border: 1px solid rgba(225, 225, 225, 0.5);
+  border-radius: 15px;
+  padding: 6px 15px;
+  color: rgb(0, 128, 70);
+}
+
+.search .serch-field:focus {
+  border: 1px solid rgba(225, 225, 225, 0.5);
+  outline: none;
+}
+
+.search .close-icon {
+  margin-left: -33px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  background-color: red;
+  border-radius: 14px;
+  text-align: center;
+  border: none;
+  padding: 2px 4px;
+}
+
+.brands {
+  padding: 6px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 15px;
+}
+
+.singleBrand {
+  display: flex;
+  height: 99%;
+  width: 100%;
+  background-color: #000;
+  position: relative;
+  border-radius: 15px;
+}
+
+.singleBrand .PhonePic {
+  width: 100%;
+}
+
+.singleBrand .PhonePic img {
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.6)));
+  mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.6)));
+  border-radius: 15px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 184%;
+}
+
+.singleBrand .brand-elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 84%;
+}
+
+.singleBrand .brand-elements .arrowGo {
+  text-align: end;
+  position: relative;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.6rem;
+}
+
+.singleBrand .brand-elements .brand-text {
+  text-align: end;
+  position: relative;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.phone-detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.phone-detail-container h3 {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.phone-detail-container .detail-main .detail-main-img {
+  width: 100%;
+}
+
+.phone-detail-container .phone-detail-description {
+  display: flex;
+  margin: 0.6rem;
+  gap: 1rem;
+}
+
+.phone-detail-container .phone-detail-description .description-img img {
+  width: 100%;
+  border-radius: 13px;
+}
+
+.phone-detail-container .phone-detail-description .description-content h3 {
+  width: 100%;
+  padding: 0;
+}
+
+.phone-detail-container .phone-detail-description .description-content p {
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .brands {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .singleBrand {
+    height: 99%;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .brands {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .singleBrand {
+    height: 99%;
+    width: 99%;
+  }
+}
