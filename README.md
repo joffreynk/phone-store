@@ -59,6 +59,8 @@ This is my original work and no where else you can find it. but I have used some
 
 * [API](https://api-mobilespecs.azharimm.site/v2/latest)
 * [React Icons](https://react-icons.github.io/react-icons/search)
+* To use this design in your application read  [these terms](https://creativecommons.org/licenses/by-nc/4.0/)
+* The design followed   can be found: [https://www.behance.net/sakwadesignstudio](https://www.behance.net/sakwadesignstudio)
 
 
 ## 📝 License
